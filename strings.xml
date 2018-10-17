@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OBHCalculator</string>
+    <string name="a">A</string>
+	<string-array name="numberSystem">
+	    <item>Binary</item>
+	    <item>Octal</item>
+	    <item>Hexadecimal</item>
+	</string-array>
+</resources>
