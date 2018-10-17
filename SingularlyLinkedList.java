@@ -34,66 +34,8 @@ public class SingularlyLinkedList<E> {
 	}
 
 	// access methods
-
-	// should return size or number of nodes in the list
-	// without using 'size' attribute/variable
-	// hint: use a loop until it reaches null
-
-	// Exercise R-3.6
-	public E getSecondToTheLast() {
-		E secondToTheLast = null;
-		Node<E> n = head;
-		for (int i = 0; i < size - 1; i++) {
-			secondToTheLast = (E) n.getElement();
-			// System.out.println(secondToTheLast);
-			n = n.getNext();
-		}
-
-		return secondToTheLast;
-	}
-
-	// Exercise R-3.9
 	public int size() {
-		int count = 0;
-		for (Node<E> n = head; n != null; n = n.getNext()) {
-			count++;
-		}
-		return count;
-	}
-
-	// Exercise R-3.12
-	public void rotate() {
-		addLast(removeFirst());
-	}
-
-	// Creativity C-3.25
-	public void concatenate(SingularlyLinkedList<E> list2) {
-		int list2Size = list2.size();
-		for (int i = 1; i <= list2Size; i++) {
-			addLast(list2.removeFirst());
-		}
-	}
-
-	// Creativity C-3.26
-	/*public void concatenate(DoublyLinkedList<E> list2) {
-		int list2Size = list2.size();
-		for (int i = 1; i <= list2Size; i++) {
-			addLast(list2.removeFirst());
-		}
-	}*/
-
-	// Creativity C-3.28
-	public void reverse() {
-		if (isEmpty())
-			return;
-		
-		Node<E> lastInsertedNode = new Node<E>(first(), null);
-		tail = lastInsertedNode;
-		for (Node<E> n = head.getNext(); n != null; n = n.getNext()) {
-			Node<E> node = new Node<E>(n.getElement(), lastInsertedNode);
-			lastInsertedNode = node;
-		}
-		head = lastInsertedNode;
+		return size;
 	}
 
 	public boolean isEmpty() {
